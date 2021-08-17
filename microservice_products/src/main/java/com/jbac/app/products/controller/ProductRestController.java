@@ -53,11 +53,12 @@ public class ProductRestController {
 //		return product;
 		
 		//Lanzar una pausa(delay sleep)
-		try {
+		
+		/*try {
 			Thread.sleep(2000L);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-		}
+		}*/
 		
 		return product;
 	}

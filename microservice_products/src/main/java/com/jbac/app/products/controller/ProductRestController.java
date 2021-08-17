@@ -44,6 +44,21 @@ public class ProductRestController {
 		Product product = productService.findById(id);
 		//product.setPort(Integer.parseInt(env.getProperty("local.server.port")));
 		product.setPort(port);
+		
+//		//Lanzar una error
+//		boolean ok = false;
+//		if(!ok) {
+//			throw new RuntimeException("No se pudo cargar el producto");
+//		}
+//		return product;
+		
+		//Lanzar una pausa(delay sleep)
+		try {
+			Thread.sleep(2000L);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		return product;
 	}
 

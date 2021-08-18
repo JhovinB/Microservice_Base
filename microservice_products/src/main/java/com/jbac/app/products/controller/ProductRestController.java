@@ -15,7 +15,7 @@ import com.jbac.app.products.entities.Product;
 import com.jbac.app.products.services.IProductService;
 
 @RestController
-@RequestMapping("/api/v1/products")
+//@RequestMapping("/api/v1/products")
 public class ProductRestController {
 	
 	//Para utilizar con Feign
@@ -29,7 +29,7 @@ public class ProductRestController {
 	@Autowired
 	IProductService productService;
 	
-	@GetMapping
+	@GetMapping("/")
 	public List<Product> getListProducts(){
 		return productService.findAll()
 				.stream().map(product->{
@@ -54,12 +54,12 @@ public class ProductRestController {
 		
 		//Lanzar una pausa(delay sleep)
 		
-		/*try {
-			Thread.sleep(2000L);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}*/
-		
+//		try {
+//			Thread.sleep(2000L);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//		
 		return product;
 	}
 
